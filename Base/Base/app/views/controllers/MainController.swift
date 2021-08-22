@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MainController.swift
 //  Base
 //
-//  Created by Roberto on 31/7/21.
+//  Created by Roberto on 22/8/21.
 //
 
 import UIKit
@@ -37,6 +37,3 @@ class MainController: UIViewController, BaseController, MainContractor {
         print("Se ha producido un error")
     }
 }
-
-
-
