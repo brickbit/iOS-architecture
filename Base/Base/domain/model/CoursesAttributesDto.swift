@@ -11,4 +11,8 @@ struct CourseAttributesDto: Codable {
     let artworkUrl: String?
     let difficulty: String?
     let contributor: String?
+    
+    private enum CodingKeys : String, CodingKey {
+        case name, description, artworkUrl = "card_artwork_url", difficulty, contributor
+    }
 }

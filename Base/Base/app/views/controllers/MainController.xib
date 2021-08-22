@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -11,26 +11,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainController" customModule="Base" customModuleProvider="target">
             <connections>
+                <outlet property="courseTable" destination="1iZ-Zj-fZg" id="P2I-fq-Isq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdM-Ul-c5s">
-                    <rect key="frame" x="160.5" y="437.5" width="93" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1iZ-Zj-fZg">
+                    <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="xdM-Ul-c5s" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6Sb-ii-v9n"/>
-                <constraint firstItem="xdM-Ul-c5s" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="liD-Sy-IfA"/>
+                <constraint firstItem="1iZ-Zj-fZg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FEv-5i-4fq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1iZ-Zj-fZg" secondAttribute="trailing" id="L6m-Kk-qeS"/>
+                <constraint firstItem="1iZ-Zj-fZg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kBc-PO-MRw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1iZ-Zj-fZg" secondAttribute="bottom" id="soM-uh-t3l"/>
             </constraints>
             <point key="canvasLocation" x="-23" y="77"/>
         </view>
