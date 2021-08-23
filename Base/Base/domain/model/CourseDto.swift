@@ -8,4 +8,8 @@
 public struct CourseDto: Codable {
     let courseId: String?
     let attributes: CourseAttributesDto?
+    
+    private enum CodingKeys : String, CodingKey {
+        case courseId = "id", attributes
+    }
 }

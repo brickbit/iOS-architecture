@@ -13,6 +13,6 @@ struct CourseAttributesDto: Codable {
     let contributor: String?
     
     private enum CodingKeys : String, CodingKey {
-        case name, description, artworkUrl = "card_artwork_url", difficulty, contributor
+        case name, description, artworkUrl = "card_artwork_url", difficulty, contributor = "contributor_string"
     }
 }

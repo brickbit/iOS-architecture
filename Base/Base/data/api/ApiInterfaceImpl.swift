@@ -13,16 +13,21 @@ class ApiInterfaceImpl: ApiInterface {
 
     @Injected var environment: EnvironmentProtocol
     
-    func getCourse() throws -> URLRequest {
+    func getCourse()-> URLRequest? {
         let api = ApiRequest.getCourse
-        var url = try URLRequest(url: path(api: api).asURL())
-        url.httpMethod = method(api: api).rawValue
+        var url = try? URLRequest(url: path(api: api).asURL())
+        url?.httpMethod = method(api: api).rawValue
         let headers = environment.headers
         let _ = headers.map { header in
-            url.setValue(header.key, forHTTPHeaderField: header.value)
+            url?.setValue(header.key, forHTTPHeaderField: header.value)
         }
         let encoding = encoding(method: method(api: api))
-        return try encoding.encode(url, with: nil)
+        
+        if let url = url {
+            return try? encoding.encode(url, with: nil)
+        } else {
+            return nil
+        }
     }
     
 

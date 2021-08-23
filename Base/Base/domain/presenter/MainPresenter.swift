@@ -30,9 +30,8 @@ class MainPresenter: BasePresenter {
     
     func getCourse() {
         contractor.showProgress()
-
-        do {
-            try execute(observedValue: repository.getCourses(), onNext: { courses in
+        if let courseRepository = repository.getCourses() {
+            execute(observedValue: courseRepository, onNext: { courses in
                 self.contractor.onGetCourseSuccess(courses: courses.data )
             }, onError: { error in
                 var errorDescription = ""
@@ -52,9 +51,7 @@ class MainPresenter: BasePresenter {
                 self.contractor.hideProgress()
 
             }).disposed(by: disposeBag)
-            } catch {
-                print("Error")
-            }
+        }
     }
     
 }

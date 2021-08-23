@@ -7,9 +7,8 @@
 
 import UIKit
 
-func navigateToDetailController(_ viewController: UIViewController, course: CourseAttributesDto) {
+func navigateToDetailController(_ navigationController: UINavigationController?, course: CourseDto) {
     let detailController = DetailController()
-    detailController.modalPresentationStyle = .fullScreen
     detailController.course = course
-    viewController.present(detailController, animated: true, completion: nil)
+    navigationController?.pushViewController(detailController, animated: true)
 }

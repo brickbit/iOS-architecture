@@ -12,7 +12,11 @@ class CourseRepositoryImpl: CourseRepository {
 
     @Injected var network: NetworkDataSource
     
-    func getCourses() throws -> Observable<ListCoursesDto>  {
-        return try createRequest(network.api.getCourse())
+    func getCourses() -> Observable<ListCoursesDto>?  {
+        if let url = network.api.getCourse() {
+            return createRequest(url)
+        } else {
+            return nil
+        }
     }
 }

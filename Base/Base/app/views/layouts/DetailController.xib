@@ -17,6 +17,7 @@
                 <outlet property="courseLevelLabel" destination="n5p-IW-GW7" id="gku-b3-4nj"/>
                 <outlet property="courseTitleLabel" destination="oLg-BB-gB3" id="C7w-sL-NtP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewCourseButton" destination="Mve-wO-w0l" id="YkK-3I-erg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -61,14 +62,17 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIq-fy-cNR">
-                    <rect key="frame" x="16" y="521.66666666666663" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="16" y="521.66666666666663" width="50" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mve-wO-w0l">
                     <rect key="frame" x="16" y="838" width="396" height="30"/>
                     <state key="normal" title="View Course"/>
+                    <connections>
+                        <action selector="onViewCourseClicked:" destination="-1" eventType="touchUpInside" id="GVi-LR-Hyd"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

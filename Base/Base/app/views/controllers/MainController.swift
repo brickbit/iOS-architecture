@@ -24,7 +24,7 @@ class MainController: UIViewController, BaseController, MainContractor, UITableV
     
     typealias Presenter = MainPresenter
         
-    var courseList: [CourseAttributesDto] = []
+    var courseList: [CourseDto] = []
     
     var courseImages: [UIImage] = []
     
@@ -55,7 +55,7 @@ class MainController: UIViewController, BaseController, MainContractor, UITableV
     func onGetCourseSuccess(courses: [CourseDto?]) {
         //print(courses)
         let _ = courses.map{ item in
-            courseList.append(item!.attributes!)
+            courseList.append(item!)
             guard let artworkUrl = item?.attributes?.artworkUrl else { return }
             guard let data = try? Data(contentsOf: artworkUrl.asURL()) else { return }
             guard let image = UIImage(data: data) else { return }
@@ -78,8 +78,8 @@ class MainController: UIViewController, BaseController, MainContractor, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CourseViewCell", for: indexPath) as! CourseViewCell
 
-        cell.titleCourseLabel.text = courseList[indexPath.row].name
-        cell.subtitleCourseLabel.attributedText = courseList[indexPath.row].description?.htmlString
+        cell.titleCourseLabel.text = courseList[indexPath.row].attributes?.name
+        cell.subtitleCourseLabel.attributedText = courseList[indexPath.row].attributes?.description?.htmlString
         cell.imageView?.image = courseImages[indexPath.row]
         
         return cell
@@ -90,11 +90,6 @@ class MainController: UIViewController, BaseController, MainContractor, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        let detailController = DetailController()
-        detailController.course = courseList[indexPath.row]
-        navigationController?.pushViewController(detailController, animated: true)
-
-        //navigateToDetailController(self, course: courseList[indexPath.row])
+        navigateToDetailController(navigationController, course: courseList[indexPath.row])
     }
 }

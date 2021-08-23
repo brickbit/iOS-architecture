@@ -20,7 +20,7 @@ protocol ApiInterface {
     
     func encoding(method: RequestMethod) -> ParameterEncoding
     
-    func getCourse() throws -> URLRequest 
+    func getCourse()-> URLRequest?
 
 }
 

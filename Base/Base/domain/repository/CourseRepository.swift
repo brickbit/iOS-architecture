@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol CourseRepository {
-    func getCourses() throws -> Observable<ListCoursesDto>
+    func getCourses() -> Observable<ListCoursesDto>?
 }
