@@ -24,14 +24,27 @@
                     <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ypc-AJ-xTh">
+                    <rect key="frame" x="0.0" y="0.0" width="428" height="84"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="84" id="gOY-yq-3EK"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Title" id="S1F-m7-1T2"/>
+                    </items>
+                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="1iZ-Zj-fZg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FEv-5i-4fq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1iZ-Zj-fZg" secondAttribute="trailing" id="L6m-Kk-qeS"/>
-                <constraint firstItem="1iZ-Zj-fZg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kBc-PO-MRw"/>
+                <constraint firstItem="1iZ-Zj-fZg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Tcm-bz-IAY"/>
+                <constraint firstItem="Ypc-AJ-xTh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hdn-2a-Ac5"/>
+                <constraint firstItem="1iZ-Zj-fZg" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ix5-2M-bHV"/>
+                <constraint firstItem="Ypc-AJ-xTh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jcb-W7-WwN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1iZ-Zj-fZg" secondAttribute="bottom" id="soM-uh-t3l"/>
+                <constraint firstItem="Ypc-AJ-xTh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tzy-4O-nxR"/>
             </constraints>
             <point key="canvasLocation" x="-23" y="77"/>
         </view>

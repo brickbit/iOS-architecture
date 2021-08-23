@@ -26,9 +26,12 @@ class MainController: UIViewController, BaseController, MainContractor, UITableV
         
     var courseList: [CourseAttributesDto] = []
     
+    var courseImages: [UIImage] = []
+    
     // MARK: - Base methods
     
     func initializeUI() {
+        self.title = "Base project"
         courseTable.delegate = self
         courseTable.dataSource = self
         
@@ -53,6 +56,11 @@ class MainController: UIViewController, BaseController, MainContractor, UITableV
         //print(courses)
         let _ = courses.map{ item in
             courseList.append(item!.attributes!)
+            guard let artworkUrl = item?.attributes?.artworkUrl else { return }
+            guard let data = try? Data(contentsOf: artworkUrl.asURL()) else { return }
+            guard let image = UIImage(data: data) else { return }
+            courseImages.append(image)
+                    
         }
         courseTable.reloadData()
     }
@@ -72,9 +80,8 @@ class MainController: UIViewController, BaseController, MainContractor, UITableV
 
         cell.titleCourseLabel.text = courseList[indexPath.row].name
         cell.subtitleCourseLabel.attributedText = courseList[indexPath.row].description?.htmlString
-        if let artworkUrl = courseList[indexPath.row].artworkUrl {
-            try? cell.imageView?.load(url: artworkUrl.asURL())
-        }
+        cell.imageView?.image = courseImages[indexPath.row]
+        
         return cell
     }
     
@@ -84,5 +91,10 @@ class MainController: UIViewController, BaseController, MainContractor, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        let detailController = DetailController()
+        detailController.course = courseList[indexPath.row]
+        navigationController?.pushViewController(detailController, animated: true)
+
+        //navigateToDetailController(self, course: courseList[indexPath.row])
     }
 }

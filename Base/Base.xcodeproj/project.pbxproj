@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6212339126D2C33300144B39 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212339026D2C33300144B39 /* Extension.swift */; };
+		6212339426D2F64A00144B39 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212339226D2F64A00144B39 /* DetailController.swift */; };
+		6212339526D2F64A00144B39 /* DetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6212339326D2F64A00144B39 /* DetailController.xib */; };
+		6212339726D2F67300144B39 /* DetailContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212339626D2F67300144B39 /* DetailContractor.swift */; };
+		6212339926D2F6A400144B39 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6212339826D2F6A400144B39 /* DetailPresenter.swift */; };
 		62135E7B26D2B932002BEE03 /* CourseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62135E7926D2B932002BEE03 /* CourseViewCell.swift */; };
 		62135E7C26D2B932002BEE03 /* CourseViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62135E7A26D2B932002BEE03 /* CourseViewCell.xib */; };
 		622C64D726D2A7070057D7CE /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C64D526D2A7070057D7CE /* MainController.swift */; };
@@ -70,6 +74,10 @@
 
 /* Begin PBXFileReference section */
 		6212339026D2C33300144B39 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		6212339226D2F64A00144B39 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		6212339326D2F64A00144B39 /* DetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailController.xib; sourceTree = "<group>"; };
+		6212339626D2F67300144B39 /* DetailContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContractor.swift; sourceTree = "<group>"; };
+		6212339826D2F6A400144B39 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		62135E7926D2B932002BEE03 /* CourseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewCell.swift; sourceTree = "<group>"; };
 		62135E7A26D2B932002BEE03 /* CourseViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseViewCell.xib; sourceTree = "<group>"; };
 		622C64D526D2A7070057D7CE /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -157,7 +165,10 @@
 		626127C726C04AA400AD3342 /* layouts */ = {
 			isa = PBXGroup;
 			children = (
+				62135E7A26D2B932002BEE03 /* CourseViewCell.xib */,
+				6212339326D2F64A00144B39 /* DetailController.xib */,
 				62F0470626B573D80038D97E /* LaunchScreen.storyboard */,
+				622C64D626D2A7070057D7CE /* MainController.xib */,
 			);
 			path = layouts;
 			sourceTree = "<group>";
@@ -331,10 +342,9 @@
 			isa = PBXGroup;
 			children = (
 				626127C226BF589800AD3342 /* BaseController.swift */,
-				622C64D526D2A7070057D7CE /* MainController.swift */,
 				62135E7926D2B932002BEE03 /* CourseViewCell.swift */,
-				62135E7A26D2B932002BEE03 /* CourseViewCell.xib */,
-				622C64D626D2A7070057D7CE /* MainController.xib */,
+				622C64D526D2A7070057D7CE /* MainController.swift */,
+				6212339226D2F64A00144B39 /* DetailController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -395,6 +405,7 @@
 			children = (
 				62F0474426B5DBE70038D97E /* BaseContractor.swift */,
 				62F0475C26B6B75C0038D97E /* MainContractor.swift */,
+				6212339626D2F67300144B39 /* DetailContractor.swift */,
 			);
 			path = contractor;
 			sourceTree = "<group>";
@@ -438,6 +449,7 @@
 			children = (
 				62F0476026B702380038D97E /* BasePesenter.swift */,
 				62F0476626B709230038D97E /* MainPresenter.swift */,
+				6212339826D2F6A400144B39 /* DetailPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -567,6 +579,7 @@
 				62F0470826B573D80038D97E /* LaunchScreen.storyboard in Resources */,
 				62F0470526B573D80038D97E /* Assets.xcassets in Resources */,
 				622C64D826D2A7070057D7CE /* MainController.xib in Resources */,
+				6212339526D2F64A00144B39 /* DetailController.xib in Resources */,
 				62135E7C26D2B932002BEE03 /* CourseViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62F0476126B702380038D97E /* BasePesenter.swift in Sources */,
+				6212339726D2F67300144B39 /* DetailContractor.swift in Sources */,
 				62D9B74026C1B159008EF3A8 /* createRequest.swift in Sources */,
 				62F0475D26B6B75C0038D97E /* MainContractor.swift in Sources */,
 				62F0476926B70DB50038D97E /* CourseRepository.swift in Sources */,
@@ -605,6 +619,7 @@
 				62F0476526B703930038D97E /* CustomError.swift in Sources */,
 				626127C326BF589800AD3342 /* BaseController.swift in Sources */,
 				62F0475F26B6B8740038D97E /* CourseDto.swift in Sources */,
+				6212339426D2F64A00144B39 /* DetailController.swift in Sources */,
 				62F0476F26B7186C0038D97E /* CoursesAttributesDto.swift in Sources */,
 				626127C126BF3B8100AD3342 /* ListCoursesDto.swift in Sources */,
 				62F0477126B84F7E0038D97E /* Navigation.swift in Sources */,
@@ -623,6 +638,7 @@
 				62F0474726B5DCC60038D97E /* Either.swift in Sources */,
 				62A9791B26CC685D00CBEDDE /* EnvironmentProtocol.swift in Sources */,
 				62D9B73C26C1B033008EF3A8 /* NetworkDatasource.swift in Sources */,
+				6212339926D2F6A400144B39 /* DetailPresenter.swift in Sources */,
 				62135E7B26D2B932002BEE03 /* CourseViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
